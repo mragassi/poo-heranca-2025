@@ -1,7 +1,7 @@
 package app;  // Lembrando que o nome da classe deve ser exatamente igual o do arquivo e com letra incial maiúscula
 
-import.java.time.LocalDate;
-import.java.time.Month;
+import java.time.LocalDate;
+import java.time.Month;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class Main {
         PessoaFisica pf= new PessoaFisica(
             "Marco",
             "Rua Sem Nome, 0",
-            LocalData.of(1980, Month.March, 29),
+            LocalDate.of(1980, Month.MARCH, 29),
             "123456777");
 
         System.out.println(pf.exibirInformacoes());

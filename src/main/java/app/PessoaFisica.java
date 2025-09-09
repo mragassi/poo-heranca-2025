@@ -1,24 +1,25 @@
 package app;
 
 import java.time.LocalDate;
-import.java.time.DateTimeFormatter;
+import java.time.format.DateTimeFormatter;
 
 public class PessoaFisica{
-    private String nome;
-    private String endereco;
-    private LocalDate dataCriacao;
+    //private String nome;
+    //private String endereco;
+    //private LocalDate dataCriacao;
     private LocalDate dataNascimento;
     private String cpf;
 
     public PessoaFisica(String nome, String endereco, LocalDate dataNascimento, String cpf) {
         this.setNome(nome);
+        //this.nome = nome;
         this.setEndereco(endereco);
         this.setDataCriacao(LocalDate.now());
         this.setDataNascimento(dataNascimento);
         this.setCpf(cpf);
     }
 
-
+/*
     public String getNome() {
         return nome;
     }
@@ -42,7 +43,7 @@ public class PessoaFisica{
     public void setDataCriacao(LocalDate dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
-
+*/
     public LocalDate getDataNascimento() {
         return dataNascimento;
     }
@@ -62,7 +63,7 @@ public class PessoaFisica{
     public String exibirInformacoes() {
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         return "--- Informações da Pessoa Física ---\n" + 
-                "Nome: " = this.getNome() + "\n" +
+                "Nome: " + this.getNome() + "\n" +
                 "Endereço: " + this.getEndereco() + "\n" +
                 "CPF: " + this.getCpf() + "\n" +
                 "--------------------------------------";
