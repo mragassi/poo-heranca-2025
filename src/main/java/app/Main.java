@@ -1,5 +1,8 @@
 package app;  // Lembrando que o nome da classe deve ser exatamente igual o do arquivo e com letra incial maiúscula
 
+import.java.time.LocalDate;
+import.java.time.Month;
+
 public class Main {
     public static void main(String[] args) {
         Tarefa[] tarefas = new Tarefa[5];
@@ -14,5 +17,21 @@ public class Main {
         System.out.println(tarefas[0].getDescricao());
 
         System.out.println("Funciona!");
+
+        PessoaFisica pf= new PessoaFisica(
+            "Marco",
+            "Rua Sem Nome, 0",
+            LocalData.of(1980, Month.March, 29),
+            "123456777");
+
+        System.out.println(pf.exibirInformacoes());
+
+            PessoaJuridica pj = new PessoaJuridica(
+                "Fatec",
+                "Av. Shunji Nishimura", 
+                "Fatec Pompéia",
+                "123434/0001-25");
+            
+        System.out.println(pj.exibirInformacoes());
     }
 }
